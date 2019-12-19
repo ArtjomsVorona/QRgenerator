@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		AC1728CD23AC0BE200296960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728CC23AC0BE200296960 /* AppDelegate.swift */; };
 		AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728CE23AC0BE200296960 /* SceneDelegate.swift */; };
-		AC1728D123AC0BE200296960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728D023AC0BE200296960 /* ViewController.swift */; };
 		AC1728D423AC0BE200296960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1728D223AC0BE200296960 /* Main.storyboard */; };
 		AC1728D723AC0BE200296960 /* QRgenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC1728D523AC0BE200296960 /* QRgenerator.xcdatamodeld */; };
 		AC1728D923AC0BEC00296960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1728D823AC0BEC00296960 /* Assets.xcassets */; };
 		AC1728DC23AC0BEC00296960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1728DA23AC0BEC00296960 /* LaunchScreen.storyboard */; };
+		AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC1728C923AC0BE200296960 /* QRgenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRgenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1728CC23AC0BE200296960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1728CE23AC0BE200296960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC1728D023AC0BE200296960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC1728D323AC0BE200296960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1728D623AC0BE200296960 /* QRgenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QRgenerator.xcdatamodel; sourceTree = "<group>"; };
 		AC1728D823AC0BEC00296960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1728DB23AC0BEC00296960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1728DD23AC0BEC00296960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +58,40 @@
 		AC1728CB23AC0BE200296960 /* QRgenerator */ = {
 			isa = PBXGroup;
 			children = (
-				AC1728CC23AC0BE200296960 /* AppDelegate.swift */,
-				AC1728CE23AC0BE200296960 /* SceneDelegate.swift */,
-				AC1728D023AC0BE200296960 /* ViewController.swift */,
-				AC1728D223AC0BE200296960 /* Main.storyboard */,
+				AC1728E323AC0C2000296960 /* Delegates */,
+				AC1728E523AC0C4800296960 /* Controllers */,
+				AC1728E423AC0C3100296960 /* Views */,
 				AC1728D823AC0BEC00296960 /* Assets.xcassets */,
-				AC1728DA23AC0BEC00296960 /* LaunchScreen.storyboard */,
 				AC1728DD23AC0BEC00296960 /* Info.plist */,
 				AC1728D523AC0BE200296960 /* QRgenerator.xcdatamodeld */,
 			);
 			path = QRgenerator;
+			sourceTree = "<group>";
+		};
+		AC1728E323AC0C2000296960 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AC1728CC23AC0BE200296960 /* AppDelegate.swift */,
+				AC1728CE23AC0BE200296960 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AC1728E423AC0C3100296960 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC1728D223AC0BE200296960 /* Main.storyboard */,
+				AC1728DA23AC0BEC00296960 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC1728E523AC0C4800296960 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1728D123AC0BE200296960 /* ViewController.swift in Sources */,
 				AC1728CD23AC0BE200296960 /* AppDelegate.swift in Sources */,
 				AC1728D723AC0BE200296960 /* QRgenerator.xcdatamodeld in Sources */,
+				AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */,
 				AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
