@@ -228,11 +228,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-jn-FPq">
+                                <rect key="frame" x="375" y="20" width="19" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="shareButtonTouched:" destination="ceT-I3-ry2" eventType="touchUpInside" id="IcT-gD-1EH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="02Q-JR-T0v" firstAttribute="top" secondItem="eJD-8V-gvr" secondAttribute="top" constant="134" id="9rK-II-2bv"/>
+                            <constraint firstItem="eJD-8V-gvr" firstAttribute="trailing" secondItem="wl5-jn-FPq" secondAttribute="trailing" constant="20" id="JNQ-hc-GCG"/>
                             <constraint firstItem="02Q-JR-T0v" firstAttribute="leading" secondItem="eJD-8V-gvr" secondAttribute="leading" constant="18" id="aVi-L1-hM4"/>
+                            <constraint firstItem="wl5-jn-FPq" firstAttribute="top" secondItem="eJD-8V-gvr" secondAttribute="top" constant="20" id="dnV-12-BZ1"/>
                             <constraint firstItem="eJD-8V-gvr" firstAttribute="trailing" secondItem="02Q-JR-T0v" secondAttribute="trailing" constant="18" id="kR5-Rb-CVK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eJD-8V-gvr"/>
@@ -307,5 +317,6 @@
     <resources>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="qrcode" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

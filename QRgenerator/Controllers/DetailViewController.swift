@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     var qrImage: Data!
     var text = ""
     
+    var shareManager = ShareManager()
+    
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var qrCodeTextLabel: UILabel!
     
@@ -32,5 +34,11 @@ class DetailViewController: UIViewController {
             qrCodeTextLabel.text = "QR code text: " + text
         }
     }
+    
+    @IBAction func shareButtonTouched(_ sender: UIButton) {
+        guard let image = UIImage(data: qrImage) else { return }
+        shareManager.sharePngImage(image: image, vc: self)
+    }
+    
 
 }
