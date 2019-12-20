@@ -26,6 +26,9 @@ class GeneratorViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
         loadData()
         
         clearQrCode()
@@ -50,6 +53,16 @@ class GeneratorViewController: UIViewController {
     
     @IBAction func generateButtonTouched(_ sender: UIButton) {
         generateQRCode()
+    }
+    
+    //MARK: - Keyboard observer methods
+    
+    @objc func keyboardWillShow() {
+        print("will Show")
+    }
+    
+    @objc func keyboardWillHide() {
+        print("will hide")
     }
     
     func clearQrCode() {
