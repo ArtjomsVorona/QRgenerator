@@ -42,8 +42,9 @@ class GeneratorViewController: UIViewController {
             newItem.text = qrTextField.text
             items.append(newItem)
             saveData()
+            basicAlert(title: "QR code saved!", message: nil)
         } else {
-            print("No image to save")
+            basicAlert(title: "No QR code!", message: "Please generate QR code before saving.")
         }
     }
     
