@@ -58,11 +58,15 @@ class GeneratorViewController: UIViewController {
     //MARK: - Keyboard observer methods
     
     @objc func keyboardWillShow() {
-        print("will Show")
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= 150
+        }
     }
     
     @objc func keyboardWillHide() {
-        print("will hide")
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y += 150
+        }
     }
     
     func clearQrCode() {
