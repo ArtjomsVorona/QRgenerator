@@ -31,10 +31,12 @@ class GeneratorViewController: UIViewController {
         
         loadData()
         
+        clearTextField()
         clearQrCode()
     }
     
     @IBAction func refreshBarButtonTouched(_ sender: UIBarButtonItem) {
+        clearTextField()
         clearQrCode()
     }
     
@@ -69,9 +71,12 @@ class GeneratorViewController: UIViewController {
         }
     }
     
-    func clearQrCode() {
+    func clearTextField() {
         qrTextField.text = ""
         qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+    }
+    
+    func clearQrCode() {
         qrTextLabel.text = "QR code text: empty"
         qrImage = nil
         imageView.image = nil
@@ -129,10 +134,16 @@ class GeneratorViewController: UIViewController {
 extension GeneratorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         qrTextField.resignFirstResponder()
+        generateQRCode()
         return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         qrTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        clearQrCode()
+        return true
     }
 }
