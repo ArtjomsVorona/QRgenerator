@@ -15,6 +15,7 @@ class GeneratorViewController: UIViewController {
     var qrImage: UIImage!
     
     var context: NSManagedObjectContext?
+    var shareManager = ShareManager()
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var qrTextLabel: UILabel!
@@ -38,6 +39,14 @@ class GeneratorViewController: UIViewController {
     @IBAction func refreshBarButtonTouched(_ sender: UIBarButtonItem) {
         clearTextField()
         clearQrCode()
+    }
+    
+    @IBAction func shareBarButtonTouched(_ sender: UIBarButtonItem) {
+        if qrImage != nil {
+            shareManager.sharePngImage(image: qrImage, vc: self)
+        } else {
+            basicAlert(title: "Nothing to share!", message: "Please generate QR code before sharing.")
+        }
     }
     
     @IBAction func saveButtonTouched(_ sender: UIButton) {

@@ -117,7 +117,11 @@
                                 <action selector="refreshBarButtonTouched:" destination="HBf-HT-EJZ" id="yzN-4d-QNb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zf8-Lf-PCV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zf8-Lf-PCV">
+                            <connections>
+                                <action selector="shareBarButtonTouched:" destination="HBf-HT-EJZ" id="NrV-Qk-Ou8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="A97-ZZ-jWi" id="Jub-dM-4rU"/>

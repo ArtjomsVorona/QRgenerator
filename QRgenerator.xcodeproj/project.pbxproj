@@ -18,6 +18,7 @@
 		AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */; };
 		AC1728E923AC241A00296960 /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728E823AC241A00296960 /* SavedTableViewController.swift */; };
 		AC9E2CBF23AD0B5C0095064A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E2CBE23AD0B5C0095064A /* DetailViewController.swift */; };
+		AC9E2CC223AD11E30095064A /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E2CC123AD11E30095064A /* ShareManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		AC1728E823AC241A00296960 /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		AC9E2CBE23AD0B5C0095064A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AC9E2CC123AD11E30095064A /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		AC1728CB23AC0BE200296960 /* QRgenerator */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E2CC023AD11CE0095064A /* Managers */,
 				962EA1CE23ACE5F800E77F44 /* Extension */,
 				AC1728E323AC0C2000296960 /* Delegates */,
 				AC1728E523AC0C4800296960 /* Controllers */,
@@ -112,6 +115,14 @@
 				AC9E2CBE23AD0B5C0095064A /* DetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC9E2CC023AD11CE0095064A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E2CC123AD11E30095064A /* ShareManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				962EA1D023ACE65000E77F44 /* Alert-Ext.swift in Sources */,
 				AC1728CD23AC0BE200296960 /* AppDelegate.swift in Sources */,
 				AC1728D723AC0BE200296960 /* QRgenerator.xcdatamodeld in Sources */,
+				AC9E2CC223AD11E30095064A /* ShareManager.swift in Sources */,
 				AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */,
 				AC1728E923AC241A00296960 /* SavedTableViewController.swift in Sources */,
 				AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */,
