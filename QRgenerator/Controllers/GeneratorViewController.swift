@@ -28,7 +28,11 @@ class GeneratorViewController: UIViewController {
         
         loadData()
         
-        qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        clearQrCode()
+    }
+    
+    @IBAction func refreshBarButtonTouched(_ sender: UIBarButtonItem) {
+        clearQrCode()
     }
     
     @IBAction func saveButtonTouched(_ sender: UIButton) {
@@ -45,6 +49,14 @@ class GeneratorViewController: UIViewController {
     
     @IBAction func generateButtonTouched(_ sender: UIButton) {
         generateQRCode()
+    }
+    
+    func clearQrCode() {
+        qrTextField.text = ""
+        qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        qrTextLabel.text = "QR code text: empty"
+        qrImage = nil
+        imageView.image = nil
     }
     
     func generateQRCode() {
