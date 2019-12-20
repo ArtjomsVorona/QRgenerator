@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="byg-pA-02l">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="HBf-HT-EJZ" customClass="GeneratorViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uy1-OL-MIY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ezv-ni-cCc">
-                                <rect key="frame" x="18" y="105" width="339" height="379"/>
+                                <rect key="frame" x="18" y="149" width="378" height="379"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A97-ZZ-jWi">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="339"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="339"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="339" id="Khv-MI-6L8"/>
@@ -27,7 +27,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR code is not yet generated" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-ga-hsJ">
-                                        <rect key="frame" x="0.0" y="347" width="339" height="32"/>
+                                        <rect key="frame" x="0.0" y="347" width="378" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="hVZ-Fr-1Tm"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="q7T-Mn-7Tr"/>
@@ -39,10 +39,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="0CX-jf-EaZ">
-                                <rect key="frame" x="18" y="503" width="339" height="101"/>
+                                <rect key="frame" x="18" y="698" width="378" height="101"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text or website here" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-vz-rrR">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="LgJ-Gh-RXp"/>
@@ -56,10 +56,10 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Bd-Szx">
-                                        <rect key="frame" x="0.0" y="67" width="339" height="34"/>
+                                        <rect key="frame" x="0.0" y="67" width="378" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-dr-dh0">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="34"/>
                                                 <color key="backgroundColor" red="0.27090883259999998" green="0.27941015359999999" blue="0.29750823970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="j7D-bg-tIA"/>
@@ -74,7 +74,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JO-Dy-7AW">
-                                                <rect key="frame" x="179" y="0.0" width="160" height="34"/>
+                                                <rect key="frame" x="198.5" y="0.0" width="179.5" height="34"/>
                                                 <color key="backgroundColor" red="0.27090883259999998" green="0.27941015359999999" blue="0.29750823970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DF8-vW-nZQ"/>
@@ -112,11 +112,12 @@
                         <viewLayoutGuide key="safeArea" id="xkp-g2-xMG"/>
                     </view>
                     <navigationItem key="navigationItem" id="gTJ-kl-Msi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5Ey-88-DeF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="5Ey-88-DeF">
                             <connections>
                                 <action selector="refreshBarButtonTouched:" destination="HBf-HT-EJZ" id="yzN-4d-QNb"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zf8-Lf-PCV"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="A97-ZZ-jWi" id="Jub-dM-4rU"/>
@@ -133,19 +134,19 @@
             <objects>
                 <tableViewController id="aha-p0-krY" customClass="SavedTableViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uzw-Vf-LmJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="100" id="mem-gf-KmA" customClass="SavedTableViewCell" customModule="QRgenerator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mem-gf-KmA" id="5Hp-HD-qPe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-c4-vOy">
-                                            <rect key="frame" x="16" y="11" width="298" height="78"/>
+                                            <rect key="frame" x="16" y="11" width="337" height="78"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mne-lu-RyE">
                                                     <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
@@ -155,7 +156,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-p1-ZJJ">
-                                                    <rect key="frame" x="86" y="0.0" width="212" height="78"/>
+                                                    <rect key="frame" x="86" y="0.0" width="251" height="78"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="78" id="LmM-8Y-abv"/>
                                                         <constraint firstAttribute="width" constant="212" id="rqG-dx-6IB"/>
@@ -177,6 +178,7 @@
                                 <connections>
                                     <outlet property="codeTextLabel" destination="vqV-p1-ZJJ" id="F1r-Rk-I0f"/>
                                     <outlet property="qrCodeImageView" destination="mne-lu-RyE" id="96h-bZ-qjC"/>
+                                    <segue destination="ceT-I3-ry2" kind="showDetail" identifier="DetailVCsegue" id="gh9-UI-NHf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -190,6 +192,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBw-di-bby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540" y="673.31334332833592"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="36z-ct-B2N">
+            <objects>
+                <viewController id="ceT-I3-ry2" customClass="DetailViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpP-NG-p7u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-JR-T0v">
+                                <rect key="frame" x="18" y="134" width="378" height="379"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIC-0J-jUK">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="339"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="339" id="DF6-Pd-3XO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="mLK-v2-6Y3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR code is not yet generated" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TU-W6-akJ">
+                                        <rect key="frame" x="0.0" y="347" width="378" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="0YL-Dx-JDF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="w8S-DM-NxJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.31332707409999999" green="0.32075345519999998" blue="0.36638206239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="02Q-JR-T0v" firstAttribute="top" secondItem="eJD-8V-gvr" secondAttribute="top" constant="134" id="9rK-II-2bv"/>
+                            <constraint firstItem="02Q-JR-T0v" firstAttribute="leading" secondItem="eJD-8V-gvr" secondAttribute="leading" constant="18" id="aVi-L1-hM4"/>
+                            <constraint firstItem="eJD-8V-gvr" firstAttribute="trailing" secondItem="02Q-JR-T0v" secondAttribute="trailing" constant="18" id="kR5-Rb-CVK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eJD-8V-gvr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WBc-Ha-Q4N"/>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="pIC-0J-jUK" id="3O5-Eb-rK2"/>
+                        <outlet property="qrCodeTextLabel" destination="0TU-W6-akJ" id="PtK-lo-HCH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dls-Yj-b3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="673"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vP7-AZ-DGU">
@@ -216,7 +268,7 @@
                     <tabBarItem key="tabBarItem" title="My QR codes" image="list.bullet" catalog="system" id="iHh-EN-bqB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t7Y-7U-PUG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -235,7 +287,7 @@
                     <tabBarItem key="tabBarItem" title="Generate" image="qrcode" catalog="system" id="GBp-qQ-jQL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x58-ih-Xsf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -84,14 +84,18 @@ class SavedTableViewController: UITableViewController {
         return 80
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "DetailVCsegue" {
+            guard let detailVC = segue.destination as? DetailViewController else { return}
+            
+            let item = items[tableView.indexPathForSelectedRow!.row]
+            
+            detailVC.qrImage = item.qrImage
+            detailVC.text = item.text ?? ""
+        }
     }
-    */
+    
 
 }
