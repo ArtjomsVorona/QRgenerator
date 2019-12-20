@@ -26,6 +26,8 @@ class GeneratorViewController: UIViewController {
         context = appDelegate.persistentContainer.viewContext
         
         loadData()
+        
+        qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
     }
     
     @IBAction func saveButtonTouched(_ sender: UIButton) {
@@ -33,6 +35,8 @@ class GeneratorViewController: UIViewController {
             let newItem = Items(context: self.context!)
             newItem.qrImage = Data(qrImage.pngData()!)
             newItem.text = qrTextField.text
+            items.append(newItem)
+            saveData()
         } else {
             print("No image to save")
         }

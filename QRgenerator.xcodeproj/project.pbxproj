@@ -14,6 +14,7 @@
 		AC1728D923AC0BEC00296960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1728D823AC0BEC00296960 /* Assets.xcassets */; };
 		AC1728DC23AC0BEC00296960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1728DA23AC0BEC00296960 /* LaunchScreen.storyboard */; };
 		AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */; };
+		AC1728E923AC241A00296960 /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728E823AC241A00296960 /* SavedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC1728DB23AC0BEC00296960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1728DD23AC0BEC00296960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		AC1728E823AC241A00296960 /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */,
+				AC1728E823AC241A00296960 /* SavedTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				AC1728CD23AC0BE200296960 /* AppDelegate.swift in Sources */,
 				AC1728D723AC0BE200296960 /* QRgenerator.xcdatamodeld in Sources */,
 				AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */,
+				AC1728E923AC241A00296960 /* SavedTableViewController.swift in Sources */,
 				AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

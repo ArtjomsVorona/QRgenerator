@@ -15,37 +15,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JO-Dy-7AW">
-                                <rect key="frame" x="235" y="682" width="159" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate new QR code"/>
-                                <connections>
-                                    <action selector="generateButtonTouched:" destination="HBf-HT-EJZ" eventType="touchUpInside" id="eVL-RN-ocG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-dr-dh0">
-                                <rect key="frame" x="20" y="682" width="146" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonTouched:" destination="HBf-HT-EJZ" eventType="touchUpInside" id="P9G-2L-naB"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text or website here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-vz-rrR">
-                                <rect key="frame" x="20" y="605" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="HBf-HT-EJZ" id="iFd-u2-AxY"/>
-                                </connections>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A97-ZZ-jWi">
-                                <rect key="frame" x="20" y="180" width="374" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A97-ZZ-jWi">
+                                <rect key="frame" x="18" y="105" width="378" height="339"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="Khv-MI-6L8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="pLp-3k-7E3"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="0CX-jf-EaZ">
+                                <rect key="frame" x="18" y="649" width="378" height="101"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text or website here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-vz-rrR">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="LgJ-Gh-RXp"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="ka2-Nf-mps"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="HBf-HT-EJZ" id="iFd-u2-AxY"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-Bd-Szx">
+                                        <rect key="frame" x="0.0" y="67" width="378" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-dr-dh0">
+                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="34"/>
+                                                <color key="backgroundColor" red="0.27090883259999998" green="0.27941015359999999" blue="0.29750823970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="j7D-bg-tIA"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="nHN-DU-QYx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveButtonTouched:" destination="HBf-HT-EJZ" eventType="touchUpInside" id="P9G-2L-naB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JO-Dy-7AW">
+                                                <rect key="frame" x="198.5" y="0.0" width="179.5" height="34"/>
+                                                <color key="backgroundColor" red="0.27090883259999998" green="0.27941015359999999" blue="0.29750823970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DF8-vW-nZQ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="TYY-SD-JGT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Generate QR">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="generateButtonTouched:" destination="HBf-HT-EJZ" eventType="touchUpInside" id="eVL-RN-ocG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nq5-dr-dh0" firstAttribute="width" secondItem="1JO-Dy-7AW" secondAttribute="width" id="HkO-ye-ab0"/>
+                                            <constraint firstItem="nq5-dr-dh0" firstAttribute="height" secondItem="1JO-Dy-7AW" secondAttribute="height" id="UJ1-Ml-4r9"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1JO-Dy-7AW" firstAttribute="height" secondItem="YA4-vz-rrR" secondAttribute="height" id="r7U-Le-gbG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.87766760590000004" green="0.87049597499999998" blue="0.86298686270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A97-ZZ-jWi" firstAttribute="leading" secondItem="xkp-g2-xMG" secondAttribute="leading" constant="18" id="5Dd-eV-WJF"/>
+                            <constraint firstItem="xkp-g2-xMG" firstAttribute="bottom" secondItem="0CX-jf-EaZ" secondAttribute="bottom" constant="63" id="86S-or-8pv"/>
+                            <constraint firstItem="xkp-g2-xMG" firstAttribute="trailing" secondItem="A97-ZZ-jWi" secondAttribute="trailing" constant="18" id="OSP-jh-CLa"/>
+                            <constraint firstItem="A97-ZZ-jWi" firstAttribute="top" secondItem="xkp-g2-xMG" secondAttribute="top" constant="61" id="Qau-gm-63y"/>
+                            <constraint firstItem="0CX-jf-EaZ" firstAttribute="leading" secondItem="xkp-g2-xMG" secondAttribute="leading" constant="18" id="a2n-gU-dFd"/>
+                            <constraint firstItem="xkp-g2-xMG" firstAttribute="trailing" secondItem="0CX-jf-EaZ" secondAttribute="trailing" constant="18" id="nx4-P3-bz1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xkp-g2-xMG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Generate" image="qrcode" catalog="system" id="GBp-qQ-jQL"/>
@@ -56,23 +104,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lie-jb-CJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643.47826086956525" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="642.39999999999998" y="-17.541229385307346"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Saved Table View Controller-->
         <scene sceneID="0hj-hu-94N">
             <objects>
-                <tableViewController id="aha-p0-krY" sceneMemberID="viewController">
+                <tableViewController id="aha-p0-krY" customClass="SavedTableViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uzw-Vf-LmJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mem-gf-KmA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" textLabel="PhD-RW-EyC" style="IBUITableViewCellStyleDefault" id="mem-gf-KmA">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mem-gf-KmA" id="5Hp-HD-qPe">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PhD-RW-EyC">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
