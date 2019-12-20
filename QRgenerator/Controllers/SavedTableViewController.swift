@@ -16,7 +16,7 @@ class SavedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
@@ -57,21 +57,28 @@ class SavedTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as? SavedTableViewCell else {
+            return UITableViewCell()
+        }
 
         let item = items[indexPath.row]
-        cell.imageView?.image = UIImage(data: item.qrImage!)
-        cell.textLabel?.text = item.text
-
+        cell.qrCodeImageView.image = UIImage(data: item.qrImage!)
+        if item.text == "" {
+            cell.codeTextLabel?.text = "QR code text is empty"
+        } else {
+            cell.codeTextLabel?.text = item.text
+        }
         return cell
     }
 
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            // Delete the row from the data source
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let itemToDelete = items[indexPath.row]
+            items.remove(at: indexPath.row)
+            context?.delete(itemToDelete)
+            self.saveData()
+        }
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80

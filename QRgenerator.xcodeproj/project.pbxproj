@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962EA1CD23ACD6F200E77F44 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962EA1CC23ACD6F200E77F44 /* SavedTableViewCell.swift */; };
 		AC1728CD23AC0BE200296960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728CC23AC0BE200296960 /* AppDelegate.swift */; };
 		AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1728CE23AC0BE200296960 /* SceneDelegate.swift */; };
 		AC1728D423AC0BE200296960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1728D223AC0BE200296960 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		962EA1CC23ACD6F200E77F44 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		AC1728C923AC0BE200296960 /* QRgenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRgenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1728CC23AC0BE200296960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1728CE23AC0BE200296960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				AC1728E623AC0C6B00296960 /* GeneratorViewController.swift */,
 				AC1728E823AC241A00296960 /* SavedTableViewController.swift */,
+				962EA1CC23ACD6F200E77F44 /* SavedTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				AC1728E723AC0C6B00296960 /* GeneratorViewController.swift in Sources */,
 				AC1728E923AC241A00296960 /* SavedTableViewController.swift in Sources */,
 				AC1728CF23AC0BE200296960 /* SceneDelegate.swift in Sources */,
+				962EA1CD23ACD6F200E77F44 /* SavedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

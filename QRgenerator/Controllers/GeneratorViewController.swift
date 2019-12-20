@@ -17,6 +17,7 @@ class GeneratorViewController: UIViewController {
     var context: NSManagedObjectContext?
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var qrTextLabel: UILabel!
     @IBOutlet weak var qrTextField: UITextField!
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class GeneratorViewController: UIViewController {
         
         loadData()
         
-        qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        qrTextField.attributedPlaceholder = NSAttributedString(string: "Enter your text or website", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
     }
     
     @IBAction func saveButtonTouched(_ sender: UIButton) {
@@ -65,6 +66,12 @@ class GeneratorViewController: UIViewController {
         let imageResult = UIImage(cgImage: cgImage)
         qrImage = imageResult
         imageView.image = imageResult
+        
+        if text == "" {
+            qrTextLabel.text = "QR code text: empty"
+        } else {
+            qrTextLabel.text = "QR code text: " + text!
+        }
     }
     
     //MARK: - Core Data functions

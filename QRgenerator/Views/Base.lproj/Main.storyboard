@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Generate-->
+        <!--Generator View Controller-->
         <scene sceneID="aaT-eR-cey">
             <objects>
                 <viewController id="HBf-HT-EJZ" customClass="GeneratorViewController" customModule="QRgenerator" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,16 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A97-ZZ-jWi">
-                                <rect key="frame" x="18" y="105" width="378" height="339"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="339" id="Khv-MI-6L8"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="pLp-3k-7E3"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="0CX-jf-EaZ">
-                                <rect key="frame" x="18" y="649" width="378" height="101"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ezv-ni-cCc">
+                                <rect key="frame" x="18" y="149" width="378" height="379"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A97-ZZ-jWi">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="339"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="339" id="Khv-MI-6L8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="pLp-3k-7E3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR code is not yet generated" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-ga-hsJ">
+                                        <rect key="frame" x="0.0" y="347" width="378" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="339" id="hVZ-Fr-1Tm"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="q7T-Mn-7Tr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.31332707409999999" green="0.32075345519999998" blue="0.36638206239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="0CX-jf-EaZ">
+                                <rect key="frame" x="18" y="662" width="378" height="101"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text or website here" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-vz-rrR">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
@@ -87,24 +102,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.87766760590000004" green="0.87049597499999998" blue="0.86298686270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="A97-ZZ-jWi" firstAttribute="leading" secondItem="xkp-g2-xMG" secondAttribute="leading" constant="18" id="5Dd-eV-WJF"/>
-                            <constraint firstItem="xkp-g2-xMG" firstAttribute="bottom" secondItem="0CX-jf-EaZ" secondAttribute="bottom" constant="63" id="86S-or-8pv"/>
-                            <constraint firstItem="xkp-g2-xMG" firstAttribute="trailing" secondItem="A97-ZZ-jWi" secondAttribute="trailing" constant="18" id="OSP-jh-CLa"/>
-                            <constraint firstItem="A97-ZZ-jWi" firstAttribute="top" secondItem="xkp-g2-xMG" secondAttribute="top" constant="61" id="Qau-gm-63y"/>
+                            <constraint firstItem="Ezv-ni-cCc" firstAttribute="leading" secondItem="xkp-g2-xMG" secondAttribute="leading" constant="18" id="0wI-13-vVG"/>
+                            <constraint firstItem="xkp-g2-xMG" firstAttribute="trailing" secondItem="Ezv-ni-cCc" secondAttribute="trailing" constant="18" id="PjN-C5-n9n"/>
                             <constraint firstItem="0CX-jf-EaZ" firstAttribute="leading" secondItem="xkp-g2-xMG" secondAttribute="leading" constant="18" id="a2n-gU-dFd"/>
+                            <constraint firstItem="Ezv-ni-cCc" firstAttribute="top" secondItem="xkp-g2-xMG" secondAttribute="top" constant="61" id="knN-ra-Rbl"/>
                             <constraint firstItem="xkp-g2-xMG" firstAttribute="trailing" secondItem="0CX-jf-EaZ" secondAttribute="trailing" constant="18" id="nx4-P3-bz1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xkp-g2-xMG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Generate" image="qrcode" catalog="system" id="GBp-qQ-jQL"/>
+                    <navigationItem key="navigationItem" id="gTJ-kl-Msi"/>
                     <connections>
                         <outlet property="imageView" destination="A97-ZZ-jWi" id="Jub-dM-4rU"/>
                         <outlet property="qrTextField" destination="YA4-vz-rrR" id="wH2-6o-eTj"/>
+                        <outlet property="qrTextLabel" destination="H3R-ga-hsJ" id="WEI-yN-9No"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lie-jb-CJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642.39999999999998" y="-17.541229385307346"/>
+            <point key="canvasLocation" x="1552.1739130434785" y="-18.080357142857142"/>
         </scene>
         <!--Saved Table View Controller-->
         <scene sceneID="0hj-hu-94N">
@@ -115,22 +130,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" textLabel="PhD-RW-EyC" style="IBUITableViewCellStyleDefault" id="mem-gf-KmA">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="100" id="mem-gf-KmA" customClass="SavedTableViewCell" customModule="QRgenerator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mem-gf-KmA" id="5Hp-HD-qPe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PhD-RW-EyC">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-c4-vOy">
+                                            <rect key="frame" x="16" y="11" width="337" height="78"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mne-lu-RyE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="78" id="kfU-8W-tVu"/>
+                                                        <constraint firstAttribute="width" constant="78" id="xXg-Uv-uNZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-p1-ZJJ">
+                                                    <rect key="frame" x="86" y="0.0" width="251" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="78" id="LmM-8Y-abv"/>
+                                                        <constraint firstAttribute="width" constant="212" id="rqG-dx-6IB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZzV-c4-vOy" secondAttribute="trailing" constant="61" id="3Zm-J3-rAm"/>
+                                    <constraint firstItem="ZzV-c4-vOy" firstAttribute="leading" secondItem="mem-gf-KmA" secondAttribute="leading" constant="16" id="Djl-4x-EF3"/>
+                                    <constraint firstItem="ZzV-c4-vOy" firstAttribute="top" secondItem="mem-gf-KmA" secondAttribute="top" constant="11" id="Tod-lz-h7U"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZzV-c4-vOy" secondAttribute="bottom" constant="11" id="f32-WL-GaP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="codeTextLabel" destination="vqV-p1-ZJJ" id="F1r-Rk-I0f"/>
+                                    <outlet property="qrCodeImageView" destination="mne-lu-RyE" id="96h-bZ-qjC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -142,7 +182,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBw-di-bby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="674"/>
+            <point key="canvasLocation" x="1540" y="673.31334332833592"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vP7-AZ-DGU">
@@ -154,7 +194,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HBf-HT-EJZ" kind="relationship" relationship="viewControllers" id="jpW-Ux-CDp"/>
+                        <segue destination="lQ4-I9-9pn" kind="relationship" relationship="viewControllers" id="jpW-Ux-CDp"/>
                         <segue destination="XMK-ZW-soO" kind="relationship" relationship="viewControllers" id="MFc-TZ-ib2"/>
                     </connections>
                 </tabBarController>
@@ -180,6 +220,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjR-YF-bhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="643" y="674"/>
+        </scene>
+        <!--Generate-->
+        <scene sceneID="6oO-EH-wds">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lQ4-I9-9pn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Generate" image="qrcode" catalog="system" id="GBp-qQ-jQL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x58-ih-Xsf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HBf-HT-EJZ" kind="relationship" relationship="rootViewController" id="qny-JI-phr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQE-tG-vWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642.02898550724638" y="-18.080357142857142"/>
         </scene>
     </scenes>
     <resources>
